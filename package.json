@@ -1,0 +1,23 @@
+{
+  "name": "javascript-getting-started---stephen-burgos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thedeadman782004/Javascript-Getting-Started---Stephen-Burgos.git"
+  },
+  "keywords": [
+    "Javascript",
+    "Tutorial"
+  ],
+  "author": "Stephen Burgos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thedeadman782004/Javascript-Getting-Started---Stephen-Burgos/issues"
+  },
+  "homepage": "https://github.com/thedeadman782004/Javascript-Getting-Started---Stephen-Burgos#readme"
+}
