@@ -2,9 +2,9 @@
   "name": "javascript-getting-started---stephen-burgos",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "blackjack.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "blackjack": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
