@@ -3,7 +3,6 @@
 // Author: Stephen Burgos
 // Source: Pluralsight
 
-
 // Function to build the deck from card objects
 function createDeck(){
     let deck = [];
@@ -42,3 +41,18 @@ console.log("Welcome to Blackjack!");
 console.log("You are dealt: ");
 console.log("   " + getCardString(playerCards[0]));
 console.log("   " + getCardString(playerCards[1]));
+
+// Get elements from blackjack.html
+let newGameButton = document.getElementById("new-game-button");
+let textArea = document.getElementById("text-area");
+let hitButton = document.getElementById("hit-button");
+let stayButton = document.getElementById("stay-button");
+hitButton.style.display = 'none';
+stayButton.style.display = 'none';
+
+newGameButton.addEventListener('click', function(){
+    textArea = "Started";
+    newGameButton.style.display = 'none';
+    hitButton.style.display = 'inline';
+    stayButton.style.display = 'inline';
+});
