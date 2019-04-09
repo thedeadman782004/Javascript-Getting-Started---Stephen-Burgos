@@ -3,24 +3,42 @@
 // Author: Stephen Burgos
 // Source: Pluralsight
 
+
+// Function to build the deck from card objects
+function createDeck(){
+    let deck = [];
+    for (let suitIdx = 0; suitIdx < suits.length; suitIdx++){
+        for (let valueIdx = 0; valueIdx < values.length; valueIdx++){
+            let card = {
+                suit : suits[suitIdx],
+                value : values[valueIdx]
+            };
+            deck.push( card );
+        }
+    }
+    return deck;
+}
+
+// Get a string from the card object that can be printed to the console.
+function getCardString(card){
+    return card.value + " of " + card.suit;
+}
+
+// Shift one card from the front of the deck and return that card
+function getNextCard(){
+    return deck.shift();
+}
+
+// Arrays for building the deck
 let suits = ["Hearts", "Clubs", "Diamonds", "Spades"];
 let values = ["Ace","King","Queen","Jack","Ten","Nine","Eight","Seven","Six","Five","Four","Three","Two"];
+let deck = createDeck();
 
-let deck = [];
-for (let suitIdx = 0; suitIdx < suits.length; suitIdx++){
-    for (let valueIdx = 0; valueIdx < values.length; valueIdx++){
-        deck.push(values[valueIdx] + " of " + suits[suitIdx]);
-    }
-}
+// Deal cards to the player
+let playerCards = [ getNextCard(),getNextCard() ];
 
-for (let i = 0; i < deck.length; i++){
-    console.log(deck[i]);
-}
-
-let playerCards = [ deck[0],deck[2] ];
-
+// Log messages
 console.log("Welcome to Blackjack!");
-
 console.log("You are dealt: ");
-console.log("   " + playerCards[0]);
-console.log("   " + playerCards[1]);
+console.log("   " + getCardString(playerCards[0]));
+console.log("   " + getCardString(playerCards[1]));
